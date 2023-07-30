@@ -1,0 +1,36 @@
+apos entrar no diretório atravez do pass
+
+#para fazer a instalação padrão do node utilizar 
+npm init -y 
+
+#para instalar a lib express do
+npm install express
+
+#para reinstalar a pasta node modules utilizar
+npm install
+
+#script para iniciar a conexão automaticamente sempre que a aplicação for iniciada
+  "scripts": {
+    "start":"node ./src/server.js"  
+  
+  },
+
+#para iniciar a aplicação utilizar
+npm start
+
+Rotas e os métodos de requisição (GET, POST, PUT, DELETE, PATCH)
+
+#
+http://localhost:3333/message?page=5&limit=10
+
+#para o servidor atulizar automaticamente enaquanto estiver em desenvolvimento
+npm install nodemon -- save-dev
+npm run dev
+#para rodar o nodemon
+
+#Metodos do controller
+index - GET para listar varios registros.
+show - GET para exibir um registro especifico.
+create - POST para criar um registro.
+update - PUT para atualizar um registro.
+delete - DELETE para remover um registro. 
