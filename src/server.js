@@ -1,3 +1,5 @@
+require("express-async-errors")
+
 const express = require("express");
 
 const routes = require("./routes")
@@ -9,3 +11,4 @@ app.use(routes);
 
 const PORT = 3333;
 app.listen(PORT, () => console.log(`server is running on port ${PORT}`));
+

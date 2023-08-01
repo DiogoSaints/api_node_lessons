@@ -1,12 +1,20 @@
-const {Router} = require("express");
-
-const UsersController = require("../controllers/userController")
+const { Router } = require("express");
+const UsersController = require("../controllers/usersController");
 
 const usersRoutes = Router();
 
-const usersController = new UsersController();
+function myMiddleware(request,response, next){
+    console.log("você passou pelo middler");
+    next();
 
-usersRoutes.post("/", UsersController.create);
-    
+}
+
+
+
+
+
+const userController = new UsersController();
+
+usersRoutes.post("/",myMiddleware, userController.create);
 
 module.exports = usersRoutes;
