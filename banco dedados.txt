@@ -1,0 +1,2 @@
+#para instalar o sqlite utilizar
+npm install sqlite3 sqlite -- save
