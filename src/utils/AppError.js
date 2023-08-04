@@ -1,5 +1,3 @@
-const UsersController = require("../controllers/usersController");
-
 class AppError {
     message;
     statusCode;
