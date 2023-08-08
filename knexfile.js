@@ -8,6 +8,12 @@ module.exports = {
       filename: path.resolve(__dirname, "src", "database", "database.db")
     },
 
+    //Pool serve para ativar a exclusão dos itens em cascata nas tabelas
+    
+    pool:{
+      afterCreate:(conn, cb) => conn.run("PRAGMA foreing_keys = ON", cb)
+    },
+
     migrations:{
       directory: path.resolve(__dirname, "src", "database", "knex", "migrations")
 
